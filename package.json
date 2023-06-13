@@ -1,0 +1,14 @@
+{
+  "name": "echo-with-node-wasi-rust",
+  "version": "1.0.0",
+  "description": "",
+  "author": "shijiao <51071534@qq.com>",
+  "main": "index.mjs",
+  "scripts": {
+    "build": "cd crates/echor && cargo build -r --target wasm32-wasi",
+    "start": "NODE_ENV=production node --experimental-wasi-unstable-preview1 index.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
